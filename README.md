@@ -1,2 +1,3 @@
 # HoraDeCodar-Javascript-
-Atividade
+Atividades Hora de Codar voltadas para Javascript
+
