@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de codar - Ex.4</title>
+    <script>
+        var area;
+        var valido = true;
+        var qualFigura = prompt("Qual figura você deseja calcular a área? \n 1-Retângulo/Paralelogramo | 2-Quadrado | 3-Losango |\n      4-Trapézio | 5-Triângulo | 6-Círculo | ");
+        switch(qualFigura){
+            case '1':
+                var base = prompt("Digite o valor da base");
+                var altura = prompt("Digite o valor da altura");
+                area = base * altura;
+            break;
+            case '2':
+                var lado = prompt("Digite o tamanho do lado");
+                area = lado*lado;
+            break;
+            case '3':
+                var diagMenor = prompt("Digite o tamanho da diagonal menor");
+                var diagMaior = prompt("Digite o tamanho da diagonal maior");
+                area = (diagMaior * diagMenor)/2;
+            break;
+            case '4':
+                var baseMaior = prompt("Digite o tamanho da base maior");
+                var baseMenor = prompt("Digite o tamanho da base menor");
+                altura = prompt("Digite o valor da altura");
+                area = ((baseMaior + baseMenor) * altura)/2;
+            break;
+            case '5': 
+                base = prompt("Digite o valor da base");
+                altura = prompt("Digite o valor da altura");
+                area = (base * altura)/2;
+            break;
+            case '6':
+                const pi = 3.1415;
+                var raio = prompt("Digite o valor do raio");
+                area = pi * (raio ** 2);
+             break;
+             default:
+                alert("Figura inválida");
+                valido = false;
+             break;                
+        }
+        if(valido){
+            alert("O valor da área da figura é: " + area);
+        }
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>
