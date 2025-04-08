@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar 2 - Ex. 6</title>
+    <script>
+        var soma = 0;
+        var valores = [];
+        for (let cont = 1; cont <= 6; cont++) {
+            let valor = parseFloat(prompt("Digite o valor " + cont + ":"));
+            valores.push(valor);
+            if (valor < 72) {
+                soma += valor;
+            }
+        }
+
+
+        alert(valores);
+        alert("A soma dos valores menores de 72 é: " + soma);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
