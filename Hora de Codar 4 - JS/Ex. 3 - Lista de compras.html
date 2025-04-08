@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar 4 - Ex. 2</title>
+    <script>
+        var frutas = ['banana', 'maçã', 'pera', 'melancia'];
+        var valorUsuario;
+        while (frutas.length > 0) {
+            valorUsuario = prompt('Digite o nome de uma fruta');
+            if (frutas.includes(valorUsuario)) {
+                frutas.pop(valorUsuario);
+            } else {
+                alert("Fruta indisponível no nosso mercado")
+            }
+        }
+        alert("Lista de compras finalizada");
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

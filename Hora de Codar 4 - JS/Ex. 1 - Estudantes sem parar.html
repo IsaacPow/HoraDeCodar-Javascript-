@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar 4 - Ex. 1</title>
+    <script>
+        var estudantes = [];
+        var quantidade = 0;
+        adicionarEstudante();
+        function adicionarEstudante() {
+            let novoEstudante;
+            novoEstudante = prompt("Digite o nome do estudante\n(Escreva PARE para interromper o programa)");
+            while (novoEstudante != 'PARE') {
+                estudantes.push(novoEstudante);
+                quantidade++;
+                adicionarEstudante();
+            }
+            alert("Quantidade de estudantes: " + quantidade +
+                "\nLista de estudantes: " + estudantes);
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
