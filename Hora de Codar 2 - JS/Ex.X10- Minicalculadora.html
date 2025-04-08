@@ -1,18 +1,75 @@
 <!DOCTYPE HTML>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hora de Codar 2 - Ex. 10</title>
-        <script>
-                function somar(){
-ek,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
-                }
-        </script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar 2 - Ex. 10</title>
+    <script>
+        var resultado;
+        var num1 = prompt("Digite o primeiro numero");
+        var num2 = prompt("Digite o segundo numero");
+        var operacao = prompt("Digite qual operação realizar: \n1 - Adição | 2 - Subtração | 3 - Multiplicação\n4 - Divisão | 5 - Potenciação | 6 - Módulo");
+        parseFloat(num1);
+        parseFloat(num2);
+        switch (operacao) {
+            case '1':
+                alert(soma());
+                break
+            case '2':
+                alert(subtracao());
+                break
+            case '3':
+                alert(multiplicacao());
+                break
+            case '4':
+                alert(divisao());
+                break
+            case '5':
+                alert(potenciacao());
+                break
+            case '6':
+                alert(modulo());
+                break
+            default:
+                alert("Operação inválida");
+                break
+
+        }
+
+        function soma() {
+            return (
+                num1 + num2
+            )
+        }
+        function subtracao() {
+            return (num1 - num2);
+        }
+        function multiplicacao() {
+            return (num1 * num2);
+        }
+        function divisao() {
+            if (num2 != 0) {
+                return (num1 / num2);
+            }
+            else {
+                return ("Essa operação é inválida");
+            }
+        }
+        function potenciacao() {
+            return (num1 ** num2);
+        }
+        function modulo() {
+            return (num1 % num2);
+        }
+
+    </script>
 
 
-    </head>
-    <body>
-        
-    </body>
+</head>
+
+<body>
+
+</body>
+
 </html>
