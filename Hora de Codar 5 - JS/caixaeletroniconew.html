@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa Eletrônico</title>
+    <script>
+
+        var saldo = 100.5; //Float
+        var escolha;
+        var senha;
+        var nome;
+        function boasVindas() {
+            nome = prompt("Digite seu nome");
+            alert("Olá " + nome + ", é um prazer ter você por aqui!");
+            escolha();
+        }
+        function escolha() {
+            escolhe = parseInt(prompt('Selecione uma opção: \n1.) Saldo \n2.) Extrato \n3.) Saque \n4.) Depósito \n5.) Transferência \n6.) Sair'));
+            inicio();
+        }
+        function inicio() {
+
+            switch (escolhe) {
+                case 1:
+                    if (senha()) {
+                        ver_saldo();
+                    }
+                    break;
+                case 2:
+                    if (senha()) {
+                        ver_extrato();
+                    }
+                    break;
+                case 3:
+                    if (senha()) {
+                        fazer_saque();;
+                    }
+
+                    break;
+                case 4:
+                    fazer_deposito();
+                    break;
+                case 5:
+                    transferencia();
+                    break;
+                case 6:
+                    sair();
+                    break;
+                default:
+                    erro();
+                    break;
+            }
+        }
+
+        function ver_saldo() {
+            alert('Seu saldo atual é: ' + saldo);
+            escolha();
+        }
+
+        function fazer_deposito() {
+            var deposito = parseFloat(prompt('Qual o valor para depósito?'));
+            // Not a Number
+            if (isNaN(deposito) || deposito === '') {
+                alert('Por favor, informe um número:');
+                fazer_deposito();
+            } else {
+                saldo += deposito;
+                ver_saldo();
+            }
+        }
+
+        function fazer_saque() {
+            var saque = parseFloat(prompt('Qual o valor para saque?'));
+            if (isNaN(saque) || saque === '') {
+                alert('Por favor, informe um número:');
+                fazer_saque();
+            } else {
+                if (saque > saldo || saque <= 0) {
+                    alert('Operação não autorizada');
+                    escolha();
+                } else {
+                    saldo -= saque;
+
+                    ver_saldo();
+                }
+            }
+        }
+
+        function ver_extrato() {
+            alert("13/10 - Compras     -100R$\n15/10 - Bônus        +50R$");
+            escolha();
+        }
+
+        function transferencia() {
+            var numConta = prompt("Digite o numero da conta para qual deseja transferir ");
+            if (!Number.isInteger(numConta)) {
+                alert("Número inválido");
+                transferencia();
+            } else {
+                var valor = prompt("Digite o valor da transferência");
+                if (isNaN(valor) || valor === '') {
+                    alert('Por favor, informe um número:');
+                    fazer_valor();
+                } else {
+                    if (valor > saldo || valor <= 0) {
+                        alert('Operação não autorizada');
+                        escolha();
+                    } else {
+                        saldo -= valor;
+
+                        ver_saldo();
+                    }
+                }
+            }
+        }
+
+        function erro() {
+            alert('Por favor, informe um número entre 1 e 4');
+            escolha();
+        }
+
+        function sair() {
+            var confirma = confirm('Você deseja sair?');
+            if (confirma) {
+                alert("Foi um prazer te ter por aqui " + nome);
+                window.close();
+            } else {
+                escolha();
+            }
+        }
+        function senha() {
+            numSenha = prompt("Digite o valor da senha")
+            if (numSenha == 3589) {
+                return (true);
+            } else {
+                alert("Senha Incorreta");
+                escolha();
+                return (false);
+
+            }
+        }
+
+
+
+        boasVindas();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
