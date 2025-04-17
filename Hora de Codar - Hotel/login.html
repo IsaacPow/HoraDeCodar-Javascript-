@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>teste</title>
+    <script>
+        function login (){
+        var nome = prompt("Digite seu nome:");
+        if(autenticacao()){
+            alert("Funcionou");
+        }
+        }
+    
+        function autenticacao (){
+        const senha = 2678;
+        var senhaUsuario = prompt("Digite sua senha (utilize apenas números)"); 
+        if (senhaUsuario == senha){
+            alert("Login realizado com sucesso ");
+            return (true);
+        }
+        else{
+            alert ("Senha incorreta");
+            autenticacao();
+        }
+        }
+        login();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
